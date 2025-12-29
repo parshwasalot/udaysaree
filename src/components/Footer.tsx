@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
-import logo from "@/assets/uday-logo.svg";
+import logo from "@/assets/uday-logo-footer.svg";
 
 const Footer = () => {
   const whatsappLink = "https://wa.me/919879647137?text=Hello! I'm interested in your saree collection.";
