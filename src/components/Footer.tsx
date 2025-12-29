@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
+import logo from "@/assets/uday-logo.svg";
 
 const Footer = () => {
   const whatsappLink = "https://wa.me/919879647137?text=Hello! I'm interested in your saree collection.";
@@ -18,7 +19,7 @@ const Footer = () => {
                   Show Room
                 </p>
               </div>
-              <img src="src/assets/uday-logo (1).svg" alt="Uday Saree Logo" className="h-[66px] ml-[-18px]" />
+              <img src={logo} alt="Uday Saree Logo" className="h-[66px] ml-[-18px]" />
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Serving Bhavnagar with trusted quality sarees since 1982. 
