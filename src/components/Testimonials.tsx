@@ -23,30 +23,30 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/50 to-background">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-muted/50 to-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-accent font-medium mb-2 tracking-wider uppercase text-sm">Testimonials</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <p className="text-accent font-medium mb-2 tracking-wider uppercase text-xs sm:text-sm">Testimonials</p>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             What Our <span className="text-primary">Customers Say</span>
           </h2>
-          <div className="flex items-center justify-center gap-2 mb-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="w-6 h-6 fill-gold text-gold" />
+                <Star key={star} className="w-5 h-5 sm:w-6 sm:h-6 fill-gold text-gold" />
               ))}
             </div>
-            <span className="text-muted-foreground">4.9 out of 5 based on countless reviews</span>
+            <span className="text-muted-foreground text-sm sm:text-base">4.9 out of 5 based on countless reviews</span>
           </div>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="p-8 bg-card rounded-lg border border-border shadow-card hover:shadow-elegant transition-all duration-300 animate-slide-up"
+              className="p-6 sm:p-8 bg-card rounded-lg border border-border shadow-card hover:shadow-elegant transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Stars */}

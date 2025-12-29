@@ -164,6 +164,24 @@
     background: linear-gradient(90deg, hsl(45 80% 50%), hsl(45 70% 65%));
     border-radius: 2px;
   }
+
+  /* Container max-width override for full responsive design */
+  .container {
+    @apply w-full px-4;
+    max-width: 1280px;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      @apply px-6;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      @apply px-8;
+    }
+  }
 }
 
 @keyframes float {

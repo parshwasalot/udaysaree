@@ -6,12 +6,12 @@ const LocationSection = () => {
   const whatsappLink = "https://wa.me/919879647137?text=Hello! I'd like to know more about visiting your showroom.";
 
   return (
-    <section id="location" className="py-20 bg-muted/50">
+    <section id="location" className="py-12 sm:py-16 md:py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-accent font-medium mb-2 tracking-wider uppercase text-sm">Visit Us</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <p className="text-accent font-medium mb-2 tracking-wider uppercase text-xs sm:text-sm">Visit Us</p>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             Our <span className="text-primary">Showroom</span>
           </h2>
           <p className="text-muted-foreground">
@@ -19,9 +19,9 @@ const LocationSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Map */}
-          <div className="rounded-lg overflow-hidden shadow-elegant h-[400px] lg:h-auto">
+          <div className="rounded-lg overflow-hidden shadow-elegant h-[300px] sm:h-[400px] lg:h-auto">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.054798305503!2d72.14490367505351!3d21.77814008006537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5b8213e4f2bd%3A0xe2ca06d86a2a2cea!2sUday%20Saree%20Show%20Room!5e0!3m2!1sen!2sin!4v1767004371707!5m2!1sen!2sin"
               width="100%"
@@ -35,16 +35,16 @@ const LocationSection = () => {
           </div>
 
           {/* Info Cards */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Address Card */}
-            <div className="p-6 bg-card rounded-lg border border-border shadow-card">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-gold" />
+            <div className="p-4 sm:p-6 bg-card rounded-lg border border-border shadow-card">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Address</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="font-serif text-base sm:text-lg font-semibold text-foreground mb-2">Address</h3>
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     Uday Saree Show Room<br />
                     3, Gautam Market, Vora Bazaar<br />
                     B/H: Mahalaxmi Temple<br />
@@ -56,14 +56,14 @@ const LocationSection = () => {
             </div>
 
             {/* Hours Card */}
-            <div className="p-6 bg-card rounded-lg border border-border shadow-card">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
-                  <Clock className="w-6 h-6 text-gold" />
+            <div className="p-4 sm:p-6 bg-card rounded-lg border border-border shadow-card">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Business Hours</h3>
-                  <div className="text-muted-foreground space-y-1">
+                  <h3 className="font-serif text-base sm:text-lg font-semibold text-foreground mb-2">Business Hours</h3>
+                  <div className="text-muted-foreground text-sm sm:text-base space-y-1">
                     <p>Monday - Saturday: 10:00 AM - 8:00 PM</p>
                     <p className="text-sm text-gold">Closed on Sundays & Public Holidays</p>
                   </div>
@@ -72,13 +72,13 @@ const LocationSection = () => {
             </div>
 
             {/* Contact Card */}
-            <div className="p-6 bg-card rounded-lg border border-border shadow-card">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6 text-gold" />
+            <div className="p-4 sm:p-6 bg-card rounded-lg border border-border shadow-card">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Contact</h3>
+                  <h3 className="font-serif text-base sm:text-lg font-semibold text-foreground mb-2">Contact</h3>
                   <div className="space-y-2">
                     <a href="tel:+919879647137" className="block text-muted-foreground hover:text-primary transition-colors">
                       +91 98796 47137
@@ -89,15 +89,15 @@ const LocationSection = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a href={directionsLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-                <Button variant="maroon" size="lg" className="w-full gap-2">
-                  <Navigation className="w-5 h-5" />
+                <Button variant="maroon" size="lg" className="w-full gap-2 text-sm sm:text-base">
+                  <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
                   Get Directions
                 </Button>
               </a>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-                <Button variant="whatsapp" size="lg" className="w-full">
+                <Button variant="whatsapp" size="lg" className="w-full text-sm sm:text-base">
                   Chat on WhatsApp
                 </Button>
               </a>

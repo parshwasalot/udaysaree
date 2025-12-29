@@ -26,14 +26,14 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-0">
             <div className="flex flex-col">
-              <span className="font-serif text-2xl font-bold text-primary">
+              <span className="font-serif text-xl sm:text-2xl font-bold text-primary">
                 Uday Saree
               </span>
-              <span className="text-xs tracking-widest text-accent uppercase">
+              <span className="text-[10px] sm:text-xs tracking-widest text-accent uppercase">
                 Show Room
               </span>
             </div>
-            <img src={logo} alt="Uday Saree Logo" className="h-[66px] ml-[-18px]" />
+            <img src={logo} alt="Uday Saree Logo" className="h-[50px] sm:h-[66px] ml-[-12px] sm:ml-[-18px]" />
           </Link>
 
           {/* Desktop Navigation */}

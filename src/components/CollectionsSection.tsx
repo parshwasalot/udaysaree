@@ -84,12 +84,12 @@ const CollectionsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/50">
+    <section className="py-12 sm:py-16 md:py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-accent font-medium mb-2 tracking-wider uppercase text-sm">Our Collections</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <p className="text-accent font-medium mb-2 tracking-wider uppercase text-xs sm:text-sm">Our Collections</p>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             Discover Timeless <span className="text-primary">Elegance</span>
           </h2>
           <p className="text-muted-foreground">
@@ -99,7 +99,7 @@ const CollectionsSection = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {collections.map((collection, index) => (
             <div 
               key={collection.title} 

@@ -8,18 +8,18 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 py-12 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-0">
               <div>
-                <h3 className="font-serif text-2xl font-bold">Uday Saree</h3>
-                <p className="text-sm tracking-widest text-gold uppercase">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold">Uday Saree</h3>
+                <p className="text-xs sm:text-sm tracking-widest text-gold uppercase">
                   Show Room
                 </p>
               </div>
-              <img src={logo} alt="Uday Saree Logo" className="h-[66px] ml-[-18px]" />
+              <img src={logo} alt="Uday Saree Logo" className="h-[50px] sm:h-[66px] ml-[-12px] sm:ml-[-18px]" />
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Serving Bhavnagar with trusted quality sarees since 1982. 
@@ -116,9 +116,9 @@ const Footer = () => {
       {/* Copyright Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <p>© {new Date().getFullYear()} Uday Saree Show Room. All rights reserved.</p>
-            <p>Bhavnagar's Trusted Saree Destination Since 1982</p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 sm:gap-4 text-xs sm:text-sm text-primary-foreground/60">
+            <p className="text-center md:text-left">© {new Date().getFullYear()} Uday Saree Show Room. All rights reserved.</p>
+            <p className="text-center md:text-right">Bhavnagar's Trusted Saree Destination Since 1982</p>
           </div>
         </div>
       </div>

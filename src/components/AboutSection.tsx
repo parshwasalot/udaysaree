@@ -1,8 +1,8 @@
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image Side */}
           <div className="relative">
             <div className="relative z-10">
@@ -18,15 +18,15 @@ const AboutSection = () => {
               </div>
             </div>
             {/* Decorative Element */}
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gold/10 rounded-lg -z-0" />
-            <div className="absolute -top-6 -left-6 w-32 h-32 border-2 border-gold/30 rounded-lg -z-0" />
+            <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-32 h-32 sm:w-48 sm:h-48 bg-gold/10 rounded-lg -z-0" />
+            <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-24 h-24 sm:w-32 sm:h-32 border-2 border-gold/30 rounded-lg -z-0" />
           </div>
 
           {/* Content Side */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <div>
-              <p className="text-accent font-medium mb-2 tracking-wider uppercase text-sm">Our Story</p>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight">
+              <p className="text-accent font-medium mb-2 tracking-wider uppercase text-xs sm:text-sm">Our Story</p>
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight">
                 Four Decades of{" "}
                 <span className="text-primary">Trusted Excellence</span>
               </h2>
@@ -51,30 +51,30 @@ const AboutSection = () => {
             </div>
 
             {/* Features */}
-            <div className="grid grid-cols-2 gap-4 pt-6">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                  <span className="text-gold text-lg">✓</span>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-4 sm:pt-6">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <span className="text-gold text-sm sm:text-lg">✓</span>
                 </div>
-                <span className="text-foreground font-medium">Genuine Fabrics</span>
+                <span className="text-foreground font-medium text-sm sm:text-base">Genuine Fabrics</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                  <span className="text-gold text-lg">✓</span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <span className="text-gold text-sm sm:text-lg">✓</span>
                 </div>
-                <span className="text-foreground font-medium">Fair Pricing</span>
+                <span className="text-foreground font-medium text-sm sm:text-base">Fair Pricing</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                  <span className="text-gold text-lg">✓</span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <span className="text-gold text-sm sm:text-lg">✓</span>
                 </div>
-                <span className="text-foreground font-medium">Personal Service</span>
+                <span className="text-foreground font-medium text-sm sm:text-base">Personal Service</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                  <span className="text-gold text-lg">✓</span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
+                  <span className="text-gold text-sm sm:text-lg">✓</span>
                 </div>
-                <span className="text-foreground font-medium">Family Values</span>
+                <span className="text-foreground font-medium text-sm sm:text-base">Family Values</span>
               </div>
             </div>
           </div>

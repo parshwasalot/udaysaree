@@ -35,12 +35,12 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-accent font-medium mb-2 tracking-wider uppercase text-sm">Why Choose Us</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <p className="text-accent font-medium mb-2 tracking-wider uppercase text-xs sm:text-sm">Why Choose Us</p>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             The <span className="text-primary">Uday Difference</span>
           </h2>
           <p className="text-muted-foreground">
@@ -49,11 +49,11 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group p-8 bg-card rounded-lg border border-border hover:border-gold/50 hover:shadow-elegant transition-all duration-300 animate-slide-up"
+              className="group p-6 sm:p-8 bg-card rounded-lg border border-border hover:border-gold/50 hover:shadow-elegant transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
