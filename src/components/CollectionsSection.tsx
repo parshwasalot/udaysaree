@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import bridalSaree from "@/assets/bridal-saree.jpg";
 import banarasiSaree from "@/assets/banarasi-saree.jpg";
 import partySaree from "@/assets/party-saree.jpg";
-import silkSaree from "@/assets/silk-saree.jpg";
+import dressMaterial from "@/assets/dress-material.webp";
 import cottonSaree from "@/assets/cotton-saree.jpg";
 import festiveSaree from "@/assets/festive-saree.jpg";
 
@@ -67,20 +67,20 @@ const CollectionsSection = () => {
       description: "Traditional Banarasi sarees with intricate brocade patterns and golden zari borders.",
     },
     {
-      image: silkSaree,
-      title: "Premium Cotton Sarees",
-      description: "Exquisite handwoven and designer cotton sarees featuring intricate patterns, prints, and embroidery work.",
-    },
-    {
-      image: cottonSaree,
-      title: "Cotton & Daily Wear",
-      description: "Comfortable cotton sarees with beautiful prints for everyday elegance and office wear.",
+      image: dressMaterial,
+      title: "Dress & Dress Materials",
+      description: "Wide range of premium dress materials and ready-made dresses featuring beautiful designs.",
     },
     {
       image: festiveSaree,
       title: "Festive Collections",
       description: "Vibrant sarees for Diwali, Navratri, Holi, and all your festive celebrations.",
     },
+    {
+      image: cottonSaree,
+      title: "Cotton & Daily Wear",
+      description: "Comfortable cotton sarees with beautiful prints for everyday elegance and office wear.",
+    }
   ];
 
   return (

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import bridalSaree from "@/assets/bridal-saree.jpg";
 import banarasiSaree from "@/assets/banarasi-saree.jpg";
 import partySaree from "@/assets/party-saree.jpg";
-import silkSaree from "@/assets/silk-saree.jpg";
+import dressMaterial from "@/assets/dress-material.webp";
 import cottonSaree from "@/assets/cotton-saree.jpg";
 import festiveSaree from "@/assets/festive-saree.jpg";
 
@@ -97,25 +97,14 @@ const Collections = () => {
       ]
     },
     {
-      image: silkSaree,
-      title: "Designer Cotton Sarees",
-      description: "Experience luxury in pure cotton with our exclusive designer collection featuring intricate prints, embroidery, and contemporary designs.",
+      image: dressMaterial,
+      title: "Dress & Dress Materials",
+      description: "Discover our exclusive collection of dress materials and ready-made dresses perfect for any occasion. From casual to festive, find your perfect style.",
       features: [
-        "Premium quality cotton",
+        "Premium quality fabrics",
         "Designer prints & embroidery",
-        "Rich borders and pallu",
+        "Unstitched & ready-made options",
         "Traditional & contemporary designs"
-      ]
-    },
-    {
-      image: cottonSaree,
-      title: "Cotton & Daily Wear",
-      description: "Embrace everyday elegance with our comfortable cotton saree collection. Perfect for office wear, casual outings, and daily use.",
-      features: [
-        "Pure cotton & cotton blends",
-        "Block print & batik designs",
-        "Light and breathable fabrics",
-        "Affordable pricing"
       ]
     },
     {
@@ -127,6 +116,17 @@ const Collections = () => {
         "Traditional motifs",
         "Bandhani & leheriya styles",
         "Seasonal special designs"
+      ]
+    },
+    {
+      image: cottonSaree,
+      title: "Cotton & Daily Wear",
+      description: "Embrace everyday elegance with our comfortable cotton saree collection. Perfect for office wear, casual outings, and daily use.",
+      features: [
+        "Pure cotton & cotton blends",
+        "Block print & batik designs",
+        "Light and breathable fabrics",
+        "Affordable pricing"
       ]
     }
   ];
