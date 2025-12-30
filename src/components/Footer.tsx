@@ -78,7 +78,19 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold shrink-0" />
-                <a href="tel:+919879647137" className="text-primary-foreground/80 hover:text-gold transition-colors">
+                <a 
+                  href="tel:+919879647137" 
+                  className="text-primary-foreground/80 hover:text-gold transition-colors"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'phone_call_click', {
+                        event_category: 'engagement',
+                        event_label: 'Footer',
+                        value: 1
+                      });
+                    }
+                  }}
+                >
                   +91 98796 47137
                 </a>
               </div>

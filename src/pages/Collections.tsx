@@ -185,7 +185,20 @@ const Collections = () => {
                 Visit our showroom to explore thousands more options. Our team will help you find the perfect saree for any occasion.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/919879647137?text=Hello! I'm looking for a specific type of saree. Can you help?" target="_blank" rel="noopener noreferrer">
+                <a 
+                  href="https://wa.me/919879647137?text=Hello! I'm looking for a specific type of saree. Can you help?" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'whatsapp_click', {
+                        event_category: 'engagement',
+                        event_label: 'Collections - CTA Section',
+                        value: 1
+                      });
+                    }
+                  }}
+                >
                   <Button variant="whatsapp" size="lg">
                     Chat on WhatsApp
                   </Button>

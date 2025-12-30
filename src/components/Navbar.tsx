@@ -55,13 +55,37 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+919879647137">
+            <a 
+              href="tel:+919879647137"
+              onClick={() => {
+                if (typeof window !== 'undefined' && window.gtag) {
+                  window.gtag('event', 'phone_call_click', {
+                    event_category: 'engagement',
+                    event_label: 'Navbar - Desktop',
+                    value: 1
+                  });
+                }
+              }}
+            >
               <Button variant="outline" size="sm" className="gap-2">
                 <Phone className="w-4 h-4" />
                 Call Now
               </Button>
             </a>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <a 
+              href={whatsappLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => {
+                if (typeof window !== 'undefined' && window.gtag) {
+                  window.gtag('event', 'whatsapp_click', {
+                    event_category: 'engagement',
+                    event_label: 'Navbar - Desktop',
+                    value: 1
+                  });
+                }
+              }}
+            >
               <Button variant="whatsapp" size="sm">
                 WhatsApp
               </Button>
@@ -95,13 +119,37 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
-                <a href="tel:+919879647137">
+                <a 
+                  href="tel:+919879647137"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'phone_call_click', {
+                        event_category: 'engagement',
+                        event_label: 'Navbar - Mobile',
+                        value: 1
+                      });
+                    }
+                  }}
+                >
                   <Button variant="outline" className="w-full gap-2">
                     <Phone className="w-4 h-4" />
                     Call Now
                   </Button>
                 </a>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <a 
+                  href={whatsappLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'whatsapp_click', {
+                        event_category: 'engagement',
+                        event_label: 'Navbar - Mobile',
+                        value: 1
+                      });
+                    }
+                  }}
+                >
                   <Button variant="whatsapp" className="w-full">
                     Chat on WhatsApp
                   </Button>
