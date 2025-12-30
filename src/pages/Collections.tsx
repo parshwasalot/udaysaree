@@ -134,10 +134,10 @@ const Collections = () => {
   return (
     <>
       <Helmet>
-        <title>Saree Collections - Uday Saree Show Room | Cotton, Bridal & Party Wear</title>
+        <title>Saree Collections in Bhavnagar | Cotton, Bridal & Wedding Sarees - Uday Saree</title>
         <meta 
           name="description" 
-          content="Explore our extensive collection of sarees - premium cotton, bridal, Banarasi, party wear & festive sarees. Specializing in designer cotton sarees in Bhavnagar. Enquire on WhatsApp today!" 
+          content="Explore premium cotton sarees, bridal sarees, Banarasi & wedding sarees in Bhavnagar. Wide collection of festive & party wear sarees. Enquire on WhatsApp today!" 
         />
       </Helmet>
 
@@ -150,7 +150,7 @@ const Collections = () => {
             <div className="container mx-auto px-4 text-center">
               <p className="text-gold font-medium mb-4 tracking-wider uppercase text-sm">Our Collections</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-ivory mb-6">
-                Discover Timeless Elegance
+                Saree Collections in Bhavnagar
               </h1>
               <p className="text-ivory/80 max-w-2xl mx-auto text-lg">
                 Explore our curated collection of premium sarees sourced from the finest weavers across India.

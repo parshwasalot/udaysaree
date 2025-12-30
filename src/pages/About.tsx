@@ -7,10 +7,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Uday Saree Show Room | Bhavnagar's Trusted Saree Destination</title>
+        <title>About Us - Saree Shop in Bhavnagar | Uday Saree Show Room</title>
         <meta 
           name="description" 
-          content="Learn about Uday Saree Show Room's journey of over 40 years serving Bhavnagar with quality sarees. A family business built on trust, quality, and personalized service." 
+          content="Trusted saree showroom in Bhavnagar serving customers since 1982. Family business offering bridal, wedding & festive sarees with personalized service." 
         />
       </Helmet>
 

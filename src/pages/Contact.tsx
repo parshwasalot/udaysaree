@@ -11,10 +11,10 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Uday Saree Show Room | Visit Our Bhavnagar Showroom</title>
+        <title>Contact - Saree Shop in Bhavnagar | Visit Uday Saree Show Room</title>
         <meta 
           name="description" 
-          content="Visit Uday Saree Show Room in Bhavnagar. Located at Gautam Market, Vora Bazaar. Contact us on WhatsApp or call for enquiries. Open Mon-Sat 10AM-8PM. Closed Sundays & public holidays." 
+          content="Visit Uday Saree Show Room in Bhavnagar at Gautam Market, Vora Bazaar. Contact on WhatsApp for enquiries. Open Mon-Sat 10AM-8PM." 
         />
       </Helmet>
 

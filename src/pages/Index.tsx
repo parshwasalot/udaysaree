@@ -12,10 +12,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Uday Saree Show Room - Best Saree Shop in Bhavnagar | Bridal & Wedding Sarees</title>
+        <title>Saree Shop in Bhavnagar | Uday Saree Show Room - Cotton, Bridal & Wedding Sarees</title>
         <meta 
           name="description" 
-          content="Uday Saree Show Room - Bhavnagar's trusted saree destination since 1982. Explore our exquisite collection of bridal sarees, cotton sarees, wedding wear & festive sarees. Specializing in premium cotton sarees. Visit our showroom or enquire on WhatsApp." 
+          content="Trusted saree showroom in Bhavnagar offering bridal, wedding & festive sarees. Specializing in premium cotton sarees since 1982. Visit our showroom or enquire on WhatsApp." 
         />
         <meta 
           name="keywords" 

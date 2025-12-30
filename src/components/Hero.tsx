@@ -28,8 +28,8 @@ const Hero = () => {
 
           {/* Heading */}
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-ivory leading-tight mb-6 animate-slide-up">
-            Timeless Sarees for{" "}
-            <span className="text-gradient-gold">Every Occasion</span>
+            Best Saree Shop in Bhavnagar{" "}
+            <span className="text-gradient-gold">Since 1982</span>
           </h1>
 
           {/* Subheading */}
