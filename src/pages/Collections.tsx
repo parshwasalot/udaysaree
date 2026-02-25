@@ -39,7 +39,7 @@ const CollectionCard = ({ image, title, description, features }: CollectionCardP
           <p className="text-muted-foreground mb-6 leading-relaxed">
             {description}
           </p>
-          
+
           {/* Features */}
           <ul className="space-y-2 mb-6">
             {features.map((feature, index) => (
@@ -50,7 +50,22 @@ const CollectionCard = ({ image, title, description, features }: CollectionCardP
             ))}
           </ul>
 
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  event: 'whatsapp_click',
+                  event_category: 'engagement',
+                  event_label: `Collections Page - ${title}`,
+                  value: 1
+                });
+              }
+            }}
+          >
             <Button variant="gold" size="lg" className="w-full md:w-auto">
               Enquire on WhatsApp
             </Button>
@@ -135,15 +150,15 @@ const Collections = () => {
     <>
       <Helmet>
         <title>Saree Collections in Bhavnagar | Cotton, Bridal & Wedding Sarees - Uday Saree</title>
-        <meta 
-          name="description" 
-          content="Explore premium cotton sarees, bridal sarees, Banarasi & wedding sarees in Bhavnagar. Wide collection of festive & party wear sarees. Enquire on WhatsApp today!" 
+        <meta
+          name="description"
+          content="Explore premium cotton sarees, bridal sarees, Banarasi & wedding sarees in Bhavnagar. Wide collection of festive & party wear sarees. Enquire on WhatsApp today!"
         />
       </Helmet>
 
       <div className="min-h-screen bg-background">
         <Navbar />
-        
+
         <main className="pt-20">
           {/* Hero Section */}
           <section className="py-20 bg-gradient-to-b from-maroon-dark to-primary">
@@ -163,7 +178,7 @@ const Collections = () => {
             <div className="container mx-auto px-4">
               <div className="space-y-12">
                 {collections.map((collection, index) => (
-                  <div 
+                  <div
                     key={collection.title}
                     className={`animate-slide-up ${index % 2 === 1 ? 'md:[&>div]:flex-row-reverse' : ''}`}
                     style={{ animationDelay: `${index * 0.1}s` }}
@@ -185,13 +200,15 @@ const Collections = () => {
                 Visit our showroom to explore thousands more options. Our team will help you find the perfect saree for any occasion.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="https://wa.me/919879647137?text=Hello! I'm looking for a specific type of saree. Can you help?" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/919879647137?text=Hello! I'm looking for a specific type of saree. Can you help?"
+                  target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => {
-                    if (typeof window !== 'undefined' && window.gtag) {
-                      window.gtag('event', 'whatsapp_click', {
+                    if (typeof window !== 'undefined') {
+                      window.dataLayer = window.dataLayer || [];
+                      window.dataLayer.push({
+                        event: 'whatsapp_click',
                         event_category: 'engagement',
                         event_label: 'Collections - CTA Section',
                         value: 1
@@ -203,7 +220,20 @@ const Collections = () => {
                     Chat on WhatsApp
                   </Button>
                 </a>
-                <a href="/contact">
+                <a
+                  href="/contact"
+                  onClick={() => {
+                    if (typeof window !== 'undefined') {
+                      window.dataLayer = window.dataLayer || [];
+                      window.dataLayer.push({
+                        event: 'button_click',
+                        event_category: 'engagement',
+                        event_label: 'Collections Page - Visit Showroom',
+                        value: 1
+                      });
+                    }
+                  }}
+                >
                   <Button variant="maroon" size="lg">
                     Visit Our Showroom
                   </Button>

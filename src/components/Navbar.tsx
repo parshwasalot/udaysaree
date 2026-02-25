@@ -42,11 +42,10 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-medium transition-colors duration-300 hover:text-accent ${
-                  isActive(link.path)
+                className={`font-medium transition-colors duration-300 hover:text-accent ${isActive(link.path)
                     ? "text-accent gold-underline"
                     : "text-foreground"
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
@@ -55,7 +54,7 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <a 
+            <a
               href="tel:+919879647137"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.gtag) {
@@ -72,13 +71,15 @@ const Navbar = () => {
                 Call Now
               </Button>
             </a>
-            <a 
-              href={whatsappLink} 
-              target="_blank" 
+            <a
+              href={whatsappLink}
+              target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
-                if (typeof window !== 'undefined' && window.gtag) {
-                  window.gtag('event', 'whatsapp_click', {
+                if (typeof window !== 'undefined') {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: 'whatsapp_click',
                     event_category: 'engagement',
                     event_label: 'Navbar - Desktop',
                     value: 1
@@ -111,15 +112,14 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`font-medium py-2 transition-colors duration-300 ${
-                    isActive(link.path) ? "text-accent" : "text-foreground"
-                  }`}
+                  className={`font-medium py-2 transition-colors duration-300 ${isActive(link.path) ? "text-accent" : "text-foreground"
+                    }`}
                 >
                   {link.name}
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
-                <a 
+                <a
                   href="tel:+919879647137"
                   onClick={() => {
                     if (typeof window !== 'undefined' && window.gtag) {
@@ -136,13 +136,15 @@ const Navbar = () => {
                     Call Now
                   </Button>
                 </a>
-                <a 
-                  href={whatsappLink} 
-                  target="_blank" 
+                <a
+                  href={whatsappLink}
+                  target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => {
-                    if (typeof window !== 'undefined' && window.gtag) {
-                      window.gtag('event', 'whatsapp_click', {
+                    if (typeof window !== 'undefined') {
+                      window.dataLayer = window.dataLayer || [];
+                      window.dataLayer.push({
+                        event: 'whatsapp_click',
                         event_category: 'engagement',
                         event_label: 'Navbar - Mobile',
                         value: 1

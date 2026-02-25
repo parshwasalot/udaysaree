@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-background">
+    <section data-section-name="About Us" className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image Side */}
@@ -34,18 +34,18 @@ const AboutSection = () => {
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Uday Saree Show Room is a trusted name in Bhavnagar for quality sarees. 
-                For over four decades, we have helped women find the perfect saree for 
+                Uday Saree Show Room is a trusted name in Bhavnagar for quality sarees.
+                For over four decades, we have helped women find the perfect saree for
                 weddings, festivals, and everyday elegance.
               </p>
               <p>
-                Our focus has always been genuine fabrics, fair pricing, and personal service. 
-                What started as a small family shop has grown into one of the most respected 
+                Our focus has always been genuine fabrics, fair pricing, and personal service.
+                What started as a small family shop has grown into one of the most respected
                 saree destinations in Gujarat.
               </p>
               <p>
-                We believe every woman deserves to feel beautiful, and the right saree can 
-                make any occasion special. Visit us to experience our warm hospitality and 
+                We believe every woman deserves to feel beautiful, and the right saree can
+                make any occasion special. Visit us to experience our warm hospitality and
                 discover your perfect drape.
               </p>
             </div>

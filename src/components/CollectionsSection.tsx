@@ -34,7 +34,22 @@ const CollectionCard = ({ image, title, description }: CollectionCardProps) => {
           {title}
         </h3>
         <p className="text-muted-foreground text-sm line-clamp-2">{description}</p>
-        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            if (typeof window !== 'undefined') {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'whatsapp_click',
+                event_category: 'engagement',
+                event_label: `Collections Section - ${title}`,
+                value: 1
+              });
+            }
+          }}
+        >
           <Button variant="gold" size="sm" className="w-full mt-2">
             Enquire on WhatsApp
           </Button>
@@ -84,7 +99,7 @@ const CollectionsSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-muted/50">
+    <section data-section-name="Collections" className="py-12 sm:py-16 md:py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
@@ -93,7 +108,7 @@ const CollectionsSection = () => {
             Discover Timeless <span className="text-primary">Elegance</span>
           </h2>
           <p className="text-muted-foreground">
-            From traditional bridal wear to everyday elegance, explore our curated collection 
+            From traditional bridal wear to everyday elegance, explore our curated collection
             of premium sarees sourced from the finest weavers across India.
           </p>
         </div>
@@ -101,8 +116,8 @@ const CollectionsSection = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {collections.map((collection, index) => (
-            <div 
-              key={collection.title} 
+            <div
+              key={collection.title}
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -113,7 +128,20 @@ const CollectionsSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Link to="/collections">
+          <Link
+            to="/collections"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  event: 'button_click',
+                  event_category: 'engagement',
+                  event_label: 'Collections Section - View All',
+                  value: 1
+                });
+              }
+            }}
+          >
             <Button variant="maroon" size="lg">
               View All Collections
             </Button>

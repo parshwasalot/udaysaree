@@ -6,7 +6,7 @@ const LocationSection = () => {
   const whatsappLink = "https://wa.me/919879647137?text=Hello! I'd like to know more about visiting your showroom.";
 
   return (
-    <section id="location" className="py-12 sm:py-16 md:py-20 bg-muted/50">
+    <section id="location" data-section-name="Location" className="py-12 sm:py-16 md:py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
@@ -80,12 +80,14 @@ const LocationSection = () => {
                 <div>
                   <h3 className="font-serif text-base sm:text-lg font-semibold text-foreground mb-2">Contact</h3>
                   <div className="space-y-2">
-                    <a 
-                      href="tel:+919879647137" 
+                    <a
+                      href="tel:+919879647137"
                       className="block text-muted-foreground hover:text-primary transition-colors"
                       onClick={() => {
-                        if (typeof window !== 'undefined' && window.gtag) {
-                          window.gtag('event', 'phone_call_click', {
+                        if (typeof window !== 'undefined') {
+                          window.dataLayer = window.dataLayer || [];
+                          window.dataLayer.push({
+                            event: 'phone_call_click',
                             event_category: 'engagement',
                             event_label: 'Location Section',
                             value: 1
@@ -102,13 +104,45 @@ const LocationSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href={directionsLink} target="_blank" rel="noopener noreferrer" className="flex-1">
+              <a
+                href={directionsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1"
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                      event: 'direction_click',
+                      event_category: 'engagement',
+                      event_label: 'Location Section - Get Directions',
+                      value: 1
+                    });
+                  }
+                }}
+              >
                 <Button variant="maroon" size="lg" className="w-full gap-2 text-sm sm:text-base">
                   <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
                   Get Directions
                 </Button>
               </a>
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex-1">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1"
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                      event: 'whatsapp_click',
+                      event_category: 'engagement',
+                      event_label: 'Location Section - Chat',
+                      value: 1
+                    });
+                  }
+                }}
+              >
                 <Button variant="whatsapp" size="lg" className="w-full text-sm sm:text-base">
                   Chat on WhatsApp
                 </Button>
