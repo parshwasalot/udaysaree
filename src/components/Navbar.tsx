@@ -43,8 +43,8 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`font-medium transition-colors duration-300 hover:text-accent ${isActive(link.path)
-                    ? "text-accent gold-underline"
-                    : "text-foreground"
+                  ? "text-accent gold-underline"
+                  : "text-foreground"
                   }`}
               >
                 {link.name}
@@ -76,10 +76,8 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
-                if (typeof window !== 'undefined') {
-                  window.dataLayer = window.dataLayer || [];
-                  window.dataLayer.push({
-                    event: 'whatsapp_click',
+                if (typeof window !== 'undefined' && window.gtag) {
+                  window.gtag('event', 'whatsapp_click', {
                     event_category: 'engagement',
                     event_label: 'Navbar - Desktop',
                     value: 1
@@ -141,10 +139,8 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => {
-                    if (typeof window !== 'undefined') {
-                      window.dataLayer = window.dataLayer || [];
-                      window.dataLayer.push({
-                        event: 'whatsapp_click',
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'whatsapp_click', {
                         event_category: 'engagement',
                         event_label: 'Navbar - Mobile',
                         value: 1
