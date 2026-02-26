@@ -11,7 +11,7 @@ declare global {
 const AnalyticsTracking = () => {
   const location = useLocation();
 
-  /*useEffect(() => {
+  useEffect(() => {
     // Track Page View
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
@@ -21,7 +21,7 @@ const AnalyticsTracking = () => {
         page_title: document.title || location.pathname,
       });
     }
-  }, [location]);*/
+  }, [location]);
 
   useEffect(() => {
     // Track Section View (Intersection Observer)
