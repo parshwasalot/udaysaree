@@ -84,13 +84,6 @@ const Testimonials = () => {
             className="inline-flex items-center gap-2 text-accent hover:text-primary transition-colors font-medium"
             onClick={() => {
               if (typeof window !== 'undefined') {
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                  event: 'outbound_link_click',
-                  event_category: 'engagement',
-                  event_label: 'Testimonials - Google Reviews',
-                  value: 1
-                });
               }
             }}
           >

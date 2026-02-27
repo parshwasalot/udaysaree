@@ -163,17 +163,6 @@ const Contact = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1"
-                      onClick={() => {
-                        if (typeof window !== 'undefined') {
-                          window.dataLayer = window.dataLayer || [];
-                          window.dataLayer.push({
-                            event: 'whatsapp_click',
-                            event_category: 'engagement',
-                            event_label: 'Contact Page - Main CTA',
-                            value: 1
-                          });
-                        }
-                      }}
                     >
                       <Button variant="whatsapp" size="lg" className="w-full gap-2 text-sm sm:text-base">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -187,40 +176,18 @@ const Contact = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1"
-                      onClick={() => {
-                        if (typeof window !== 'undefined') {
-                          window.dataLayer = window.dataLayer || [];
-                          window.dataLayer.push({
-                            event: 'direction_click',
-                            event_category: 'engagement',
-                            event_label: 'Contact Page - Get Directions',
-                            value: 1
-                          });
-                        }
-                      }}
                     >
                       <Button variant="maroon" size="lg" className="w-full gap-2 text-sm sm:text-base">
                         <Navigation className="w-4 h-4 sm:w-5 sm:h-5" />
                         Get Directions
                       </Button>
                     </a>
-                  </div>
-                </div>
-
-                {/* Map */}
-                <div className="rounded-lg overflow-hidden shadow-elegant h-[300px] sm:h-[400px] lg:h-auto lg:min-h-[500px]">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.054798305503!2d72.14490367505351!3d21.77814008006537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5b8213e4f2bd%3A0xe2ca06d86a2a2cea!2sUday%20Saree%20Show%20Room!5e0!3m2!1sen!2sin!4v1767004371707!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Uday Saree Show Room Location"
-                  />
-                </div>
-              </div>
+                          <a
+                            href="mailto:udaysareeshowroom@gmail.com"
+                            className="text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base break-all"
+                          >
+                            udaysareeshowroom@gmail.com
+                          </a>
             </div>
           </section>
 
