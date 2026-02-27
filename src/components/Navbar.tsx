@@ -57,8 +57,10 @@ const Navbar = () => {
             <a
               href="tel:+919879647137"
               onClick={() => {
-                if (typeof window !== 'undefined' && window.gtag) {
-                  window.gtag('event', 'phone_call_click', {
+                if (typeof window !== 'undefined') {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: 'phone_call_click',
                     event_category: 'engagement',
                     event_label: 'Navbar - Desktop',
                     value: 1
@@ -76,8 +78,10 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
-                if (typeof window !== 'undefined' && window.gtag) {
-                  window.gtag('event', 'whatsapp_click', {
+                if (typeof window !== 'undefined') {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: 'whatsapp_click',
                     event_category: 'engagement',
                     event_label: 'Navbar - Desktop',
                     value: 1
@@ -120,8 +124,10 @@ const Navbar = () => {
                 <a
                   href="tel:+919879647137"
                   onClick={() => {
-                    if (typeof window !== 'undefined' && window.gtag) {
-                      window.gtag('event', 'phone_call_click', {
+                    if (typeof window !== 'undefined') {
+                      window.dataLayer = window.dataLayer || [];
+                      window.dataLayer.push({
+                        event: 'phone_call_click',
                         event_category: 'engagement',
                         event_label: 'Navbar - Mobile',
                         value: 1
@@ -139,8 +145,10 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => {
-                    if (typeof window !== 'undefined' && window.gtag) {
-                      window.gtag('event', 'whatsapp_click', {
+                    if (typeof window !== 'undefined') {
+                      window.dataLayer = window.dataLayer || [];
+                      window.dataLayer.push({
+                        event: 'whatsapp_click',
                         event_category: 'engagement',
                         event_label: 'Navbar - Mobile',
                         value: 1
