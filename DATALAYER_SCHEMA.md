@@ -10,6 +10,7 @@ This document outlines the event schema for Google Tag Manager `dataLayer.push()
 - **User Action**: User navigates to a new page or route.
 - **Event Name**: `page_view`
 - **Event Params**:
+  - `page_location`: Full URL of the page (e.g., `'https://www.udaysaree.com/collections'`)
   - `page_path`: Path of the page (e.g., `'/'`, `'/collections'`, `'/contact'`)
   - `page_title`: Title of the page
 
@@ -17,6 +18,7 @@ This document outlines the event schema for Google Tag Manager `dataLayer.push()
 ```javascript
 window.dataLayer.push({
   event: 'page_view',
+  page_location: window.location.href, // full URL helps GA4 register the page properly
   page_path: '/collections',
   page_title: 'Saree Collections in Bhavnagar'
 });

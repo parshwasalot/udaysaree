@@ -19,6 +19,7 @@ In the same Tag configuration, under **Event Parameters**, map the following par
 | `event_category` | `{{DLV - event_category}}` (Variable Name: `event_category`) |
 | `event_label` | `{{DLV - event_label}}` (Variable Name: `event_label`) |
 | `value` | `{{DLV - value}}` (Variable Name: `value`) |
+| `page_location` | `{{DLV - page_location}}` (Variable Name: `page_location`) |
 | `page_path` | `{{DLV - page_path}}` (Variable Name: `page_path`) |
 | `page_title` | `{{DLV - page_title}}` (Variable Name: `page_title`) |
 | `section_name` | `{{DLV - section_name}}` (Variable Name: `section_name`) |

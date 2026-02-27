@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 declare global {
@@ -11,17 +11,25 @@ declare global {
 const AnalyticsTracking = () => {
   const location = useLocation();
 
+  // Track Page View only once per unique page
+  const lastPathRef = useRef<string | null>(null);
   useEffect(() => {
-    // Track Page View
-    if (typeof window !== 'undefined') {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'page_view',
-        page_path: location.pathname,
-        page_title: document.title || location.pathname,
-      });
-    }
-  }, [location]);
+    if (lastPathRef.current === location.pathname) return;
+    lastPathRef.current = location.pathname;
+    // Delay to allow React Helmet to update document.title
+    const timer = setTimeout(() => {
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'page_view',
+          page_location: window.location.href,
+          page_path: location.pathname,
+          page_title: document.title || location.pathname,
+        });
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   useEffect(() => {
     // Track Section View (Intersection Observer)
